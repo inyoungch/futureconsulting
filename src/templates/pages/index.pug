@@ -1,0 +1,65 @@
+extends ../template
+
+block variables
+    - var title = 'FutureConsulting, бухгалтерские и консультационные услуги, г.Караганда';
+
+block content
+    .wrapper
+        include ../common/header-top
+        .main-content   
+            .container
+                .slider
+                    .slider__item
+                        .slider__img
+                            img.slider__pic(src="assets/images/1.jpg", alt="")
+                    .slider__item
+                        .slider__img
+                            img.slider__pic(src="assets/images/2.jpg", alt="")
+                    .slider__item
+                        .slider__img
+                            img.slider__pic(src="assets/images/3.jpg", alt="")
+                .slogan
+                    p.slogan-top С уверенностью в будущее вместе с нами
+                    p.slogan-bottom Профессионализм. Надежность. Качество.
+                .btn
+                    button.btn_contacts(onclick="window.location.href='/contacts.html'") Свяжитесь с нами сейчас!
+                .resume
+                    ul.resume__list
+                        li.resume__item
+                            h2.resume__item-name О нас
+                            p.resume__item-desc ТОО "FutureConsulting"  оказывает услуги для юридических лиц и индивидуальных предпринимателей в сфере бухгалтерии и налогового учета. 
+                            p.resume__item-desc Наши специалисты обладают бесценным опытом и всеми необходимыми знаниями для выполнения работы, связанной с ведением бухгалтерского учета на предприятиях.
+                            .btn-read
+                                button.btn_next(onclick="window.location.href='/about.html'") Читать дальше &gt;&gt;
+                        li.resume__item
+                            h2.resume__item-name Наши ценности 
+                            p.resume__item-desc В основе нашей деятельности – понимание того, что она должна соответствовать интересам и потребностям каждого клиента индивидуально.
+                            ul.resume__item-values Основными приоритетами компании являются:
+                                li.resume__item-value Честность
+                                li.resume__item-value Надежность
+                                li.resume__item-value Качество
+                                li.resume__item-value Профессионализм
+                                li.resume__item-value Результативность
+                                li.resume__item-value Стремление совершенствоваться
+                                li.resume__item-value Ответственность
+                                li.resume__item-value Добросовестное отношение
+                            .btn-read
+                                button.btn_next(onclick="window.location.href='/about.html'") Читать дальше &gt;&gt;
+                        li.resume__item
+                            h2.resume__item-name Услуги
+                            ul.resume__item-services
+                                li.resume__item-service Консультационные услуги по бухгалтерскому учёту
+                                li.resume__item-service Разработка учетной политики
+                                li.resume__item-service Проверка состояния бухгалтерского учета
+                                li.resume__item-service Полное бухгалтерское сопровождение
+                                li.resume__item-service Восстановление учета, базы данных
+                                li.resume__item-service Налоговое консультирование
+                                li.resume__item-service Разовые бухгалтерские услуги
+                                li.resume__item-service Отчетность в таможенном союзе
+                                li.resume__item-service Составление и сдача финансовой отчетности
+                                li.resume__item-service Сдача налоговой и статистической отчётности
+                                li.resume__item-service Дополнительные услуги
+                            .btn-read
+                                button.btn_next(onclick="window.location.href='/services.html'") Читать дальше &gt;&gt;
+        include ../common/footer
+        

@@ -1,0 +1,41 @@
+extends ../template
+
+block variables
+    - var title = 'Сертификаты';
+
+block content
+    .wrapper
+        include ../common/header-top
+        .main-content   
+            .container
+                .contacts
+                    h2.resume__item-name Контакты
+                    ul
+                        li 100024, ул.Муканова 55 "Б"
+                        li БЦ "Notre Dame" офис №214
+                        li Караганда, Казахстан
+                        li Телефон: +7-7212-36-97-55,
+                        li +7-707-310-40-44,
+                        li +7-708-436-97-55
+                        li info@futureconsulting.biz
+                .form-block
+                    .part
+                        h3 Свяжитесь с нами
+                        .form
+                            form.form__elem#form__elem(action="server.php", method="post")
+                                input.form__input#user-name(type="text" name="user-name" placeholder="Ваше Имя *" required)
+                                input.form__input#user-mail(type="text" name="user-mail" placeholder="Email *" required)
+                                input.form__input.phone-mask#user-phone(type="text" name="user-phone" placeholder="Телефон *" required)
+                                input.form__input#user-theme(type="text" name="user-theme" placeholder="Тема")
+                                textarea.form__input.form__textarea#comment(type="text" name="comment" placeholder="Сообщение *" required)
+                                .btn-send
+                                    button.btn__submit.order__btn(type="submit") Оставить заявку
+                    .part 
+                        h3 Карта
+                        a.map.dg-widget-link(href="http://2gis.kz/karaganda/firm/70000001020762710/center/73.1609630584717,49.78619632168993/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap") Посмотреть на карте Караганды
+                        .dg-widget-link
+                            a(href="http://2gis.kz/karaganda/center/73.160971,49.786192/zoom/16/routeTab/rsType/bus/to/73.160971,49.786192╎FutureConsulting, ТОО?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route") Найти проезд до FutureConsulting
+                        script(charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js")
+                        script(charset="utf-8") new DGWidgetLoader({"width":640,"height":600,"borderColor":"#a3a3a3","pos":{"lat":49.78619632168993,"lon":73.1609630584717,"zoom":16},"opt":{"city":"karaganda"},"org":[{"id":"70000001020762710"}]});
+                        noscript(style="color:#c00;font-size:16px;font-weight:bold;") Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
+        include ../common/footer

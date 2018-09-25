@@ -1,0 +1,29 @@
+.contacts{
+    margin: rem(50px) 0;
+    & ul{
+        font-family: 'Times New Roman';
+        font-style: italic;
+        font-size: rem(19px);
+    }
+
+    @include tablets{
+        padding: 30px;
+    }
+}
+
+.form-block{
+    margin-bottom: rem(70px);
+}
+
+.part {
+    text-align: center;
+    & h3{
+        font-weight: bold;
+        font-size: rem(30px);
+        text-align: center;
+    }
+}
+
+.form__textarea{
+    height: rem(100px);
+}

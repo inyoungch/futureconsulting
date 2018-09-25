@@ -1,0 +1,44 @@
+//vars
+$white:#fff;
+$black:#111111;
+$blue:#0094ff;
+$dark:#2f3234;
+
+
+$tablets:768px;
+$phones:480px;
+$iphone5:320px;
+
+//mixin
+
+@mixin dot{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+@function rem($px){
+    @return $px  / 16px+0rem;
+}
+
+@mixin tablets{
+    @media screen and (max-width:$tablets){
+        @content;
+    }
+}
+
+@mixin phones{
+    @media screen and (max-width:$phones){
+        @content;
+    }
+}
+
+@mixin iphone5{
+    @media screen and (max-width:$iphone5){
+        @content;
+    }
+}

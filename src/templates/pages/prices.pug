@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+    - var title = 'Цены';
+
+block content
+    .wrapper
+        include ../common/header-top
+        .main-content   
+            .container
+                .prices
+                    h2.resume__item-name Цены на бухгалтерские услуги
+                    p Стоимость бухгалтерского обслуживания рассчитывается индивидуально для каждой организации.
+                    p Оставьте заявку и мы рассчитаем стоимость обслуживания для Вашей организации.
+                .form
+                    form.form__elem#form__elem(action="server.php", method="post")
+                        input.form__input#user-name(type="text" name="user-name" placeholder="Ваше Имя *" required)
+                        input.form__input#user-mail(type="text" name="user-mail" placeholder="Email *" required)
+                        input.form__input.phone-mask#user-phone(type="text" name="user-phone" placeholder="Телефон *" required)
+                        .btn-send
+                            button.btn__submit.order__btn(type="submit") Оставить заявку
+
+        include ../common/footer

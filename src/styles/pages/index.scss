@@ -1,0 +1,506 @@
+.main-content {
+    padding-bottom: rem(79px);
+}
+// header
+
+.header{
+    height: rem(75px);
+    background: $black;
+    color: $white;
+}
+
+.nav{
+    height: 100%;
+    
+    @include phones{
+        display: none;
+    }
+}
+
+.nav__list{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+
+.nav__item{
+    text-transform: uppercase;
+    margin-right: rem(60px);
+    font-weight: bold;
+    font-size: rem(14px);
+
+	@include tablets{
+		font-size: rem(12px);
+	}
+}
+
+.nav__link{
+    color: $white;
+
+    &:hover{
+        color: lighten($blue, 20%);
+        transition: .3s;
+    }
+
+    &.active{
+        color: $blue;
+    }
+}
+
+// .top-block
+
+.top-block{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    background: #f9f9f9;
+}
+
+.logo{
+    line-height: rem(23px);
+}
+
+.logo__link{
+    display: flex;
+    color: $black;
+}
+
+.logo__img{
+    height: rem(130px);
+    width: rem(140px);
+
+    @include iphone5{
+        height: rem(110px);
+        width: rem(100px);
+        margin: 0 10px;
+    }
+}
+
+.logo-pic{
+    vertical-align: middle;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.logo_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem(30px);
+
+    @include phones{
+        font-size: rem(16px);
+        line-height: rem(13px);
+    }
+}
+.second{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: rem(28px);
+    @include phones{
+        font-size: rem(14px);
+        line-height: rem(13px);
+    }
+}
+
+.third{
+    font-size: rem(16px);
+    font-style: italic;
+    font-weight: normal;
+    @include phones{
+        font-size: rem(12px);
+        line-height: rem(13px);
+    }
+}
+
+.phones{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.phones_text{
+    font-size: rem(18px);
+
+	@include tablets{
+		font-size: rem(14px);
+    }
+    @include phones{
+		font-size: rem(10px);
+    }
+}
+
+.phones_number{
+    font-weight: bold;
+    font-size: rem(18px);
+    color: $black;
+
+
+	@include tablets{
+		font-size: rem(14px);
+    }
+    @include phones{
+		font-size: rem(10px);
+    }
+}
+
+//slider
+
+.slider{
+    @include phones{
+		height: rem(150px);
+    }
+}
+
+.slider__img{
+    height: rem(310px);
+    width: 100%;
+}
+
+.slider__pic{
+    vertical-align: middle;
+    //max-height: 100%;
+    max-width: 100%;
+}
+
+//.slogan
+
+.slogan{
+    text-align: center;
+    margin: rem(30px) 0;
+}
+
+.slogan-top{
+    font-size: rem(37px);
+    font-weight: 400;
+    text-transform: uppercase;
+
+	@include tablets{
+        font-size: rem(25px);
+        padding: 0 rem(20px);
+    }
+    @include phones{
+		font-size: rem(20px);
+    }
+}
+
+.slogan-bottom{
+    font-size: rem(33px);
+    font-weight: bold;
+
+	@include tablets{
+		font-size: rem(20px);
+    }
+    @include phones{
+		font-size: rem(15px);
+    }
+}
+
+//.btn
+
+.btn{
+    text-align: center;
+    margin-bottom: rem(40px);
+}
+
+.btn_contacts{
+    background: #0280ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #0280ff 0%, #42b0ff 48%, #5ebcff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #0280ff 0%,#42b0ff 48%,#5ebcff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #0280ff 0%,#42b0ff 48%,#5ebcff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0280ff', endColorstr='#5ebcff',GradientType=0 ); /* IE6-9 */
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: rem(26px);
+    padding: rem(10px);
+    border-radius: rem(10px);
+    cursor: pointer;
+
+    &:hover{
+        background: #1173d6;
+    }
+
+    @include phones{
+		font-size: rem(20px);
+    }
+}
+
+//resume 
+
+.resume{
+    margin-bottom: rem(70px);
+}
+
+.resume__list{
+    display: flex;
+    @include phones{
+		flex-direction: column;
+    }
+}
+
+.resume__item{
+    width: 33.3%;
+    padding: rem(30px) rem(50px);
+    background: #f9f9f9;
+    border: rem(0.1px) solid #afafaf;
+
+    &:nth-child(2){
+        background: #f4f4f4;
+    }
+    @include phones{
+		width: 100%;
+    }
+}
+
+.resume__item-name{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem(25px);
+    position: relative;
+    margin-bottom: rem(25px);
+
+    &::after{
+        display: block;
+        border: rem(1px) solid $black;
+        position: absolute;
+        content: "";
+        width: rem(55px);
+        margin: rem(10px) 0;
+    }
+
+	@include tablets{
+		font-size: rem(19px);
+	}
+}
+
+.resume__item-desc, .resume__item-values, .resume__item-services{
+    font-size: rem(15px);
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    font-style: italic;
+}
+
+.btn-read{
+    margin-top: rem(20px);
+}
+
+.btn_next{
+    font-weight: 400;
+    font-size: rem(12px);
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover{
+        color: $blue;
+    }
+}
+
+.resume__item-value{
+    list-style-type: disc;
+    margin-left: rem(20px);
+}
+
+.resume__item-service{
+    list-style-type: disc;
+    margin-bottom: rem(5px);
+}
+
+
+//footer
+
+.footer{
+    background: $black;
+    color: $white;
+    height: rem(79px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    @include tablets{
+		padding: rem(10px);
+	}
+}
+
+.copyright{
+    font-family: 'Times New Roman';
+    font-weight: 400;
+    font-style: normal;
+    font-size: rem(18px);
+
+	@include tablets{
+		font-size: rem(14px);
+	}
+}
+
+.nav--bottom{
+    font-weight: 400;
+    margin-right: rem(20px);
+}
+
+.container--bottom{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// for form
+
+.popup{
+    display: none;
+}
+
+.status-popup{
+    width: rem(250px);
+}
+
+.status-popup__inner{
+    text-align: center;
+    padding: rem(16px);
+}
+
+.status-popup__message{
+    font-family: Ubuntu;
+    font-size: rem(12px);
+}
+
+//hamburger
+
+.hamburger__menu{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    @include iphone5{
+        top: 5%;
+    }
+}
+
+.hamburger__menu-link{
+    vertical-align: middle;
+    position: relative;
+    height: 1.375rem;
+    align-items: center;
+    margin-left: 1.875rem;
+    display: none;
+    z-index: 100;
+
+    @include tablets{
+        display: inline-flex;
+    }
+}
+
+.hamburger__bars {
+	&, &:before, &:after {
+		background: $white;
+		width: rem(38px);
+        height: rem(5px);
+		border-radius: 3px;
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+        top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+    }
+}
+
+.hamburger__menu-link.is-active .hamburger__bars{
+    background: transparent;
+    &:before {
+      transform: translateY(10px) translateX(0) rotate(45deg);
+      border-radius: 5px; 
+    
+      @include phones{
+        transform: translateY(7px) translateX(0) rotate(45deg);
+      }
+      @include iphone5{
+        transform: translateY(5px) translateX(0) rotate(45deg);
+      }
+    }
+
+    &:after {
+      transform: translateY(-7px) translateX(0) rotate(-45deg);
+      border-radius: 5px; 
+    }
+  }
+
+
+  body.locked {
+    overflow: hidden;
+}
+.dark-menu{
+    position: absolute;
+    left: -9999px;
+    right: 0;
+    background: $dark;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+}
+
+.dark-menu.is-active {
+    display: flex;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.nav_hamburger {
+    width: auto;
+
+    @include tablets{
+        display: block;
+    }
+}
+
+.nav__list {
+    width: 100%;
+    flex-direction: column;
+}
+
+.nav_hamburger .nav__list {
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav__item_hamburger {
+    display: inline;
+    text-align: center;
+    animation-fill-mode: forwards;
+    transition: opacity .3s;
+    font-size: rem(30px);
+
+    &:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.nav_hamburger .nav__link {
+    font-size: rem(24px);
+}
+

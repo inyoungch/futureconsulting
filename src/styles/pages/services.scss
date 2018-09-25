@@ -1,0 +1,64 @@
+// services
+
+.services{
+    margin-top: rem(50px);
+    margin-bottom: rem(100px);
+    & p{
+        font-family: 'Times New Roman';
+        font-size: rem(18px);
+        font-style: italic;
+    }
+
+	@include tablets{
+		margin-top: rem(30px);
+        margin-bottom: rem(50px);
+        padding: 20px;
+	}
+}
+
+.resume__item--half{
+    width: 50%;
+    @include phones{
+		width: 100%;
+    }
+}
+
+.column-part{
+    margin-bottom: rem(50px);
+
+    &::after{
+        display: block;
+        border: 0.7px solid $black;
+        position: absolute;
+        content: "";
+        width: 40%;
+        margin-top: rem(15px);
+    }
+
+    & h3{
+        font-weight: bold;
+        font-size: rem(25px);
+
+        @include phones{
+            font-size: rem(15px);
+        }
+    }
+
+    & p, & ul{
+        font-family: 'Times New Roman';
+        font-size: rem(18px);
+        font-style: italic;
+        @include phones{
+            font-size: rem(12px);
+        }
+    }
+
+    & p{
+        margin-bottom: rem(10px);
+    }
+
+    & li{
+        list-style-type: disc;
+        margin-left: rem(40px);
+    }
+}

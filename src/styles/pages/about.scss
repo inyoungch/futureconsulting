@@ -1,0 +1,45 @@
+//pictures
+
+.pictures__list{
+    width: 100%;
+    display: flex;
+    margin-bottom: rem(40px);
+}
+
+.pictures__item{
+    width: 25%;
+}
+
+.pictures__img{
+    max-width: 100%;
+    min-height: 100%;
+    vertical-align: middle;
+}
+
+//about
+
+.about{
+    font-family: 'Times New Roman';
+    font-size: rem(17px);
+
+	@include tablets{
+		padding: rem(20px);
+    }
+    
+    @include phones{
+        font-size: rem(13px);
+    }
+
+    & p{
+        padding: rem(10px) rem(50px) rem(10px) 0;
+    }
+
+    & ul{
+        margin-bottom: rem(20px);
+    }
+
+    & li{
+        list-style-type: disc;
+        margin-left: rem(30px);
+    }
+}

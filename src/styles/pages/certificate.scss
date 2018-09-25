@@ -1,0 +1,18 @@
+.gallery{
+    display: grid;
+    grid-template-columns: rem(300px) rem(300px) rem(300px);
+    grid-template-rows: rem(300px) rem(300px) rem(200px) rem(200px) rem(200px) rem(200px);
+
+    & a{
+        transform: scale(0.3)
+    }
+
+    @include tablets{
+        grid-template-columns: 15rem 15rem 15rem;
+    }
+    @include tablets{
+        grid-template-columns: 13rem 13rem;
+        grid-template-rows: 18.75rem 18.75rem 18.5rem 12.5rem 12.5rem 12.5rem;
+    }
+}
+

@@ -1,0 +1,73 @@
+.prices{
+    margin-bottom: rem(50px);
+    margin-top: rem(20px);
+
+    & p{
+        font-family: 'Times New Roman';
+        font-size: rem(18px);
+        font-style: italic;
+        padding: rem(10px);
+        text-align: center;
+    }
+    @include tablets{
+		padding: rem(20px);
+	}
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(30px);
+}
+
+.form__elem{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.form__input{
+    color: $black;
+    border: rem(1px) solid $black;
+    height: rem(30px);
+    margin-bottom: rem(5px);
+
+}
+
+.btn-send{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn__submit{
+    cursor: pointer;
+    background: $blue;
+    color: $white;
+    font-family: 'Times New Roman';
+    font-size: rem(16px);
+    font-style: italic;
+    padding: rem(10px);
+    border-radius: rem(5px);
+    transition: .3s;
+
+    &:hover{
+        background: darken($blue, 10%)
+    }
+}   
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    font-family: 'Times New Roman';
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+    font-family: 'Times New Roman';
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+    font-family: 'Times New Roman';
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+    font-family: 'Times New Roman';
+ }

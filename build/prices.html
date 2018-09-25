@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Цены </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.2/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" href="services.html">Услуги</a></li>
+            <li class="nav__item"><a class="nav__link" href="prices.html">Цены</a></li>
+            <li class="nav__item"><a class="nav__link" href="certificates.html">Сертификаты</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="top-block">
+        <div class="logo"><a class="logo__link" href="/">
+            <div class="logo__img"><img class="logo-pic" src="assets/images/icons/logo.png" alt="Logo"></div>
+            <div class="logo_text">
+              <h1 class="first">Future</h1>
+              <h1 class="second">Consulting</h1>
+              <h1 class="third">Бухгалтерские услуги</h1>
+            </div></a></div>
+        <div class="phones">
+          <div class="phones_text">Позвоните нам и получите консультацию</div><a class="phones_number" href="tel:+77212369755">+7-7212-36-97-55,</a><a class="phones_number" href="tel:+77084369755">+7-708-436-97-55</a>
+        </div>
+      </div>
+      <div class="main-content">  
+        <div class="container">
+          <div class="prices">
+            <h2 class="resume__item-name">Цены на бухгалтерские услуги</h2>
+            <p>Стоимость бухгалтерского обслуживания рассчитывается индивидуально для каждой организации.</p>
+            <p>Оставьте заявку и мы рассчитаем стоимость обслуживания для Вашей организации.</p>
+          </div>
+          <div class="form">
+            <form class="form__elem" id="form__elem" action="server.php" method="post">
+              <input class="form__input" id="user-name" type="text" name="user-name" placeholder="Ваше Имя *" required>
+              <input class="form__input" id="user-mail" type="text" name="user-mail" placeholder="Email *" required>
+              <input class="form__input phone-mask" id="user-phone" type="text" name="user-phone" placeholder="Телефон *" required>
+              <div class="btn-send">
+                <button class="btn__submit order__btn" type="submit">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container container--bottom">
+          <div class="copyright">Copyright © In Young Choi, 2015</div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav--bottom"><a class="nav__link" href="/">Главная</a></li>
+              <li class="nav__item nav--bottom"><a class="nav__link" href="about.html">О нас</a></li>
+              <li class="nav__item nav--bottom"><a class="nav__link" href="services.html">Услуги</a></li>
+              <li class="nav__item nav--bottom"><a class="nav__link" href="prices.html">Цены</a></li>
+              <li class="nav__item nav--bottom"><a class="nav__link" href="certificates.html">Сертификаты</a></li>
+              <li class="nav__item nav--bottom"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <div class="status-popup popup" id="success">
+      <div class="status-popup__inner">
+        <div class="status-popup__message">Сообщение отправлено</div>
+      </div>
+    </div>
+    <div class="status-popup popup" id="error">
+      <div class="status-popup__inner">
+        <div class="status-popup__message">Произошла ошибка</div>
+      </div>
+    </div>
+    <div class="hamburger__menu"><a class="hamburger__menu-link" id="hamburger__menu-link" href="#">
+        <div class="hamburger__bars"></div></a></div>
+    <div class="dark-menu" id="dark-menu">
+      <div class="dark-menu__items">
+        <nav class="nav_hamburger"></nav>
+        <ul class="nav__list" id="nav__list_hamburger">
+          <li class="nav__item_hamburger"><a class="nav__link" href="/">Главная</a></li>
+          <li class="nav__item_hamburger"><a class="nav__link" href="about.html">О нас</a></li>
+          <li class="nav__item_hamburger"><a class="nav__link" href="services.html">Услуги</a></li>
+          <li class="nav__item_hamburger"><a class="nav__link" href="prices.html">Цены</a></li>
+          <li class="nav__item_hamburger"><a class="nav__link" href="certificates.html">Сертификаты</a></li>
+          <li class="nav__item_hamburger"> <a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/assets/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.2/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+    <script src="/assets/scripts/bundle.js" defer></script>
+  </body>
+</html>
