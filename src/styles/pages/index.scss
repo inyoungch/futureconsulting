@@ -475,12 +475,13 @@
     }
 }
 
-.nav__list {
+.nav__listt {
+    display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.nav_hamburger .nav__list {
+.nav_hamburger .nav__listt {
     flex-direction: column;
     text-align: center;
 }
